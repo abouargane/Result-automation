@@ -1,4 +1,5 @@
-echo 'FROM python:3.9-slim
+# Utiliser une image légère de Python
+FROM python:3.9-slim
 
 # Définir le répertoire de travail
 WORKDIR /app
