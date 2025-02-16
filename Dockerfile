@@ -1,6 +1,9 @@
 # Utiliser une image légère de Python
 FROM python:3.9-slim
 
+# Copier depuis le bon dossier
+COPY src/app.py /app/
+
 # Définir le répertoire de travail
 WORKDIR /app
 
