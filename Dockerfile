@@ -16,5 +16,3 @@ EXPOSE 8080
 
 # Définir la commande de démarrage de l'application
 CMD ["python", "app.py"]
-
-' > Dockerfile
