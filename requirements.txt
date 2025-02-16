@@ -1,5 +1,7 @@
-Flask==2.1.1
-gspread==5.1.1
-oauth2client==4.1.3
-pyzbar==0.1.8
-opencv-python
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+psycopg2-binary
+python-dotenv
+qrcode[pil]
