@@ -6,10 +6,14 @@ services:
     plan: free
     branch: main
     rootDir: /
-    buildCommand: "pip install --upgrade pip && pip install -r requirements.txt"
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
     startCommand: "python -m uvicorn main:app --host 0.0.0.0 --port 8000"
     healthCheckPath: /docs
     autoDeploy: true
     envVars:
+      - key: PORT
+        value: "8000"
       - key: DATABASE_URL
         value: "postgresql://result_automation_user:LrwTETINmsLvvXGHPEGLxTHWx5XFLU0K@dpg-cup6qfl6l47c73cjd290-a.oregon-postgres.render.com/result_automation"
