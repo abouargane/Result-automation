@@ -3,7 +3,13 @@ from fastapi import FastAPI
 from backend.database import engine, Base
 from backend.routes import router
 
-app = FastAPI()
+app =  FastAPI(
+    title="Result Automation API",
+    description="API pour la collecte des résultats via QR Code",
+    version="1.0",
+    docs_url="/docs",  # Permet d'accéder à Swagger
+    redoc_url="/redoc",  # Permet d'accéder à Redoc
+)
 
 Base.metadata.create_all(bind=engine)
 app.include_router(router)
